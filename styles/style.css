@@ -1,0 +1,161 @@
+@import url('./reset.css');
+@import url('../fonts/fonts.css');
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    display: grid;
+    grid-template-areas:
+        "title description"
+        "nav description";
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    padding: 30px 0;
+    max-width: 1024px;
+}
+
+.header__title {
+    grid-area: title;
+    font-family: Oswald;
+    font-size: 40px;
+}
+
+.header__description {
+    grid-area: description;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: Cuprum;
+    font-size: 20px;
+}
+
+.header__nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header__nav__item {
+    font-family: Oswald;
+    font-size: 20px;
+}
+
+.header__nav__item a {
+    color: rgb(91, 115, 150);
+    text-decoration: none;
+}
+
+.header__nav__item a:hover {
+    color: rgb(80, 122, 185);
+}
+
+.header__nav__item_note {
+    font-size: 18px;
+    font-style: italic;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+
+.article__chapter {
+    max-width: 1024px;
+    font-family: Cuprum;
+}
+
+.article__chapter__title {
+    padding: 10px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.article__chapter__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 24px;
+}
+
+h1::selection, h2::selection, a::selection, strike::selection, b::selection, u::selection, p::selection {
+    color: #fff;
+    background: rgb(56, 56, 56);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
+    padding: 30px 0;
+    box-sizing: border-box;
+    background: rgb(39, 39, 39);
+}
+
+.footer__nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.footer__nav__block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer__nav__item {
+    font-family: Cuprum;
+    font-size: 20px;
+}
+
+.footer__nav__item a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.footer__nav__item a:visited {
+    color: rgb(255, 255, 255);
+}
+
+.footer__nav__item_note {
+    font-size: 18px;
+    font-style: italic;
+}
+
+.footer__link-back {
+    font-family: Cuprum;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.footer__link-back a:visited {
+    color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .article__chapter {
+        padding: 40px 20px;
+    }
+}
